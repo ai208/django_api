@@ -45,6 +45,29 @@ function App(){
           </Nav>
         </div>
       </Navbar>
+
+      <div className="container mt-4">
+        <Switch>
+          <Route exact path ={["/","/todos"]} render = {(props)=> <AddTodo {...props}token={token}/>
+          }>
+          </Route>
+          <Route exact path ={["/todos/:id/"]} render = {(props)=> <AddTodo {...props}token={token}/>
+          }>
+          </Route>
+          <Route exact path ={["/login"]} render = {(props)=> <Login {...props}login={login}/>
+          }>
+          </Route>
+          <Route exact path ={["/signup"]} render = {(props)=> <Signup {...props} signup={signup}/>
+          }>
+          </Route>
+        </Switch>
+      </div>
+
+      <footer className="text-center text-lg-start bg-light text-muted mt-4">
+        <div className="text-center p-4">
+          c Copyright - <a href="" target="_blank" className="text-reset fw-bold text-decoration-none">gred</a>
+        </div>
+      </footer>
     </div>
   )
 }
